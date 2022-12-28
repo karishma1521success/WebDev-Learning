@@ -1,0 +1,133 @@
+<!-- file name should be index as by rules. -->
+<!-- shift + 1 + enter == template of html -->
+
+<!DOCTYPE html>  <!-- this refers that document type is html and version is 5-->
+<html lang="en">  <!-- tells that languge is english-->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title shown on the tab section </title>
+    <link rel="stylesheet" href="./style.css">
+    <!-- internal css / styling-- -->
+    <style>
+        /* element selector */
+        h1{
+            color: aqua;     /*changes the text color*/
+            background-color: bisque; /* changes the background color*/
+            text-align: center; /* allign the text (can be center , left, right, etc*/
+            font-family: 'Courier New', Courier, monospace; /*what type of font for text (means writing of text)*/
+            font-size: larger; /* size of the text / font  value can be pixel also */
+            
+        }
+             /* universal selector */
+        *{
+            color: blue;
+           
+        }
+
+        /* class selector */
+        .className{
+            color: brown;
+        }
+        /* id selector */
+        #navbar{
+            color: rgb(47, 226, 167);
+            background-color: blueviolet;
+            border: 1px solid white;
+            border-radius: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- semantic tag -->
+    <header> 
+        this is a header
+        <nav id="navbar"> this is navigation bar inside the header </nav>
+    </header>
+    <main>
+        <h1 class="class1">heading 1</h1>
+         <!-- Html media tag -- audio and video  -->
+         <div>
+    <audio controls >
+        <source src="./audio/koyal.mp3" type="audio/mpeg">
+    </audio>
+</div>
+<div>
+    <video controls>
+        <source src="./video/file_example_MP4_480_1_5MG (1).mp4"> 
+    </video>
+</div>
+    <!-- if we want to give youtube video link that will not support so we give youtube video in the form of iframe link  -->
+    <!-- go to embedded link on the youtube video and paste it on the code editor and it will run -->
+    <div>
+        <!-- not working -->
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/URxvvpgDuT8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"  allowfullscreen ></iframe>
+</div>
+        <Section>
+        <h1> heading which have font <span style="color: blue;">part of text want style </span> size bigger and importance is also high</h1>
+
+    <h6>smallest font size and importance low compared to other headings</h6>
+
+    <p> this is a paragraph. Lorem ipsum dolor,<br>  sit amet consectetur adipisicing elit. Nostrum, dolor?</p>
+    <!-- br tag is used to give a line break -->
+
+    <a href="https://www.google.com/">Go to google</a> <!-- anchor tag used to link the websites or webpages either internally or externally       href == used to give the refernce link at which we want to redirect -->
+
+<img src="https://images.unsplash.com/photo-1670506552296-668e793daf7a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyNHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&q=60" alt="city images">
+
+
+<a href="https://course.acciojob.com/modules" target="_blank">Accio course</a> <!-- this open the link in new tab in same window-->
+
+<a href="https://www.google.com/">
+    <img src="https://images.unsplash.com/photo-1670258880233-ad36f08cf1a4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxMnx8fGVufDB8fHx8&auto=format&fit=crop&w=600&q=60" alt="girl with flower image">
+</a>
+
+<ol type="a">
+    <li style="background-color: burlywood ;">list 1</li>   <!-- inline styling-->
+    <li>list 2</li>
+</ol>
+
+<ul type = "square">
+    <li class="className">list 1</li>
+    <li>list 2</li> 
+</ul>
+
+</Section>
+<section>
+<h1>Registration form</h1>
+
+<form >
+    <!-- action attriubute tells that where we want to save our form after submitting -->
+    <label for="fname">First Name:</label> <br>
+    <input type="text" placeholder="Enter your name: "> <br> <br>
+    <label for="username">Username:</label> <br>
+    <input type="text"> <br> <br>
+    <label for="email">Email</label>
+    <input type="email" placeholder="Enter your email"> <br> <br>
+    <label for="password">Password:</label> <br>
+    <input type="password" placeholder="Password"> <br> <br>
+
+    <label for="gender">Gender: </label> <br>
+    <input type="radio" name="male" value="Male">
+    <label for="male">Male</label> 
+    
+    <input type="radio" name="female" value="Female">
+    <label for="female">Female</label> <br>
+      
+    <input type="submit"> 
+    <input type="reset">
+</section>
+ <br>
+
+   <button > Share link </button>
+    </main>
+
+<footer>
+    this is the footer 
+</footer>
+
+</form>
+</body>
+</html>
