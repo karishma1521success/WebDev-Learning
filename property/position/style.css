@@ -4,7 +4,7 @@
  }
 
  div>p{
-  margin: 10px;
+  padding: 10px;
  }
 
  .child-one{
@@ -28,8 +28,19 @@
   position: relative;
   left: 30px; /* it will shift an element towards the right and 30px away from the left*/
  }
+ 
+ .parent.absolute{
+  position: relative;
+ }
 
  .child-one.absolute{
   position: absolute;
-  
+   top: 40px; /* this take properties with the respect of main parent*/
+   /* but if we make it's parent relative then it will take css with respect to parent element */
+ }
+
+ .child-one.fixed{
+  position: fixed;
+  top: 80px;
+
  }
