@@ -1,0 +1,35 @@
+ .parent{
+  background-color:aqua;
+  border: 2px solid black;
+ }
+
+ div>p{
+  margin: 10px;
+ }
+
+ .child-one{
+  background-color: blue;
+ }
+
+ .child-two{
+  background-color: green;
+ }
+
+ .child-three{
+  background-color: yellow;
+ }
+
+ .child-one.static{
+  position: static;
+  /* left: 20px; this will not work off set doesnt't work at all if position is static */
+ }
+
+ .child-one.relative{
+  position: relative;
+  left: 30px; /* it will shift an element towards the right and 30px away from the left*/
+ }
+
+ .child-one.absolute{
+  position: absolute;
+  
+ }
