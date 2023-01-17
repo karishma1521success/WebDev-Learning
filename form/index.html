@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form in HTML</title>
+</head>
+<body>
+    <h1>Form in html</h1>
+    <!-- action is that which tells after submitting where we want to store the information  -->
+
+    <form action="#" method="post">
+        <div>
+            <label for="email">Email Address</label><br>
+            <input type="email" name="email">     <!--name attribute used for the backend purpose to know what input is this for-->
+        </div>
+
+        <div>
+            <label for="full name">Full Name</label><br>
+            <input type="text" name="fname" placeholder="First name">
+            <input type="text" name="lname" placeholder="Last name">
+        </div>
+
+
+        <div>
+            <label for="address">Address</label><br>
+            <input type="text" name="streetAddress" placeholder="Street Address"><br>
+            <input type="text" name="office Add" placeholder="Office,Suite,Apt.">
+        </div>
+
+        <div>
+            <label for="city">City</label><br>
+            <input type="text" name="city">
+            <select name="state">
+                <option value="rajasthan">Rajasthan</option>
+                <option value="delhi">Delhi</option>
+                <option value="agra">Agra</option>
+                <option value="punjab">Punjab</option>
+            </select>
+            <input type="number" name="zip">
+        </div>
+
+        <div>
+            <label for="technologies">What radio technologies are you using?</label><br>
+            <input type="checkbox" name="2G">
+            <label for="2G">2G</label>
+            <input type="checkbox" name="3G">
+            <label for="3G">3G</label>
+            <input type="checkbox" name="4G">
+            <label for="4G">4G LTE</label>
+            <input type="checkbox" name="CAT-M">
+            <label for="CAT-M">CAT-M</label>
+        </div>
+        <div>
+            <label for="data">How much data do you expect to use each month</label><br>
+            <input type="radio" name="data">
+            <label for="below50">0-50 MB</label>
+            <input type="radio" name="data">
+            <label for="btw 50-250 MB">50-250 MB</label>
+            <input type="radio" name="data">
+            <label for="250MB-1GB">250 MB -1 GB</label>
+            <input type="radio" name="data">
+            <label for="above 1Gb">1 GB+</label>
+        </div>
+
+        <div class="promocode">
+            <label for="Promo">Promo code</label><br>
+            <input type="text" name="promo code">
+        </div>
+        <div class="signup">
+            <input type="checkbox" name="signUP" required>
+            <label for="signup">Sign me up for annoying errors</label>
+            <input type="button" value="Place Order">
+            
+        </div>
+
+    </form>
+</body>
+</html>
