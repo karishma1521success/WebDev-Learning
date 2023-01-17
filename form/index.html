@@ -10,7 +10,7 @@
     <h1>Form in html</h1>
     <!-- action is that which tells after submitting where we want to store the information  -->
 
-    <form action="#" method="post">
+    <form action="./submit.html" method="post">
         <div>
             <label for="email">Email Address</label><br>
             <input type="email" name="email">     <!--name attribute used for the backend purpose to know what input is this for-->
@@ -35,7 +35,7 @@
             <select name="state">
                 <option value="rajasthan">Rajasthan</option>
                 <option value="delhi">Delhi</option>
-                <option value="agra">Agra</option>
+                <option value="agra " selected>Agra</option>   
                 <option value="punjab">Punjab</option>
             </select>
             <input type="number" name="zip">
@@ -72,6 +72,7 @@
             <input type="checkbox" name="signUP" required>
             <label for="signup">Sign me up for annoying errors</label>
             <input type="button" value="Place Order">
+            <input type="submit" value="submit">
             
         </div>
 
