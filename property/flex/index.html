@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox in CSS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+    <h2>flexbox properties always given to the parent element</h2>
+    <h3>flexbox has ---> <br>
+        1. display:flex;<br>
+        2.flex-direction:row(default), column, row-reverse, column-reverse;<br>
+        3.flex-wrap:nowrap(default), wrap, wrap-reverse; <br>
+        4. flex-flow: column wrap; {{means it is a shorthand of flex-direction and flex-wrap properties}} <span style="color:red;">flex-flow: flex-direction flex-wrap;</span><br>
+        5.justify-content: flex-start,flex-end, start, end ,center, space-between, space-around, space-evenly; [[ALIGN ITEMS WITH RESPECT TO THE X-AXIS]] <br>
+        6.align-items:stretch(default), flex-start, flex-end, center; [[ALIGN ITEMS WITH RESPECT TO THE Y AXIS]] <br> 
+        7. align-content:flex-start, flex-end, start, end, center, space-between, space-around, space-evenly; <br>
+        <span style="color:rgb(235, 26, 193);">
+            [[ALIGN ITEMS WITH RESPECT TO THE Y-AXIS BUT IT ONLY WORKS WHEN IT HAS MULTILINE ITEMS AND FLEX-WRAP IS WRAP OR WRAP-REVERSE]]
+        </span> <br>
+        8. gap --  px;   same as margin to the ITEMS <br>
+        9. row-gap: px;   give margin b/w the rows <br>
+        10. column-gap: px; give margin b/w the columns <br>
+    </h3>
+
+    <h2>Display:flex;</h2>
+    <div class="container">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+    </div>
+
+    
+<body>
+</body>
+</html>

@@ -1,0 +1,15 @@
+.container{
+    background-color: cadetblue;
+    /* height: 400px; */
+    display: flex;
+    flex-direction: row;
+    flex-wrap:wrap;
+    
+}
+
+.item{
+    background-color: blue;
+    color: white;
+    width: 20%;
+    margin: 20px;
+}
