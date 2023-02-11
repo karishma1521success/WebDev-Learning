@@ -11,7 +11,7 @@ document.write(num);    // print + cursor on the same line( just as System.out.p
 
 // Interactions in js -- alert , prompt , confirm  methods  *****************************************************
 // click ok - will close the alert pop up
-  alert("This is alert box which can contain any message in form of alert"); 
+  alert("This is alert box which can contain any message in the form of alert"); 
  
 // a pop up will display to take an input from the user
 // click on cancel then prompt will return null (which datatype is object).
@@ -27,4 +27,8 @@ document.write(num);    // print + cursor on the same line( just as System.out.p
 
    // variables in js *****************************************************************
    // we have 3 keywords for declaring the variable in js latest version that are     let, var and const
+
+   //Hoisting:   It moves the function, variable and class value to the top of their scope.
+
+   // hoisting in js is behaviour in which a variable and a function can be used even before the declaration
 
