@@ -23,11 +23,25 @@ for(let i=0; i<arr1.length;i++){
 }
 
 //2. another way to iterate over array elements is using built-in function 
-//array_Name.forEach(function_Name);
-arr.forEach(print);          // forEach function behaves like a for loop and function around paranthesis work like a code inside the for loop block
+//array_Name.forEach(function_Name);     // here function need to declare seperately
+arr1.forEach(print);          // forEach function behaves like a for loop and function around paranthesis work like a code inside the for loop block
 function print(value){
     console.log(value);
 }
+
+
+ // if we don't wanna make a function seperately then we can just declare it inside the () brackets
+//  syntax --  array_Name.forEach(function (paremeters){ block of code});
+arr1.forEach(function (value){       
+    console.log(value);
+} );
+
+
+//another way to write forEach function
+//syntax    array_Name.forEach((parameter) => {block of code});
+arr1.forEach((value) => {
+    console.log(value);
+});
 
 
 // ARRAY PROPERTIES
