@@ -128,5 +128,5 @@ console.log(arr2);        // arr2= [ 1, 3, 10000, 5.5 ]
 
 // delete mulitple elements and replace it with a multiple element at their respective indexes.
 arr2.splice(0,2,0,1);    // here It deletes the element at index 0 and 1 because delete count is 2 and replace with the 0 and 1 at index 0 and index 1 respectively
-console.log(arr2);
-
+console.log(arr2);           // arr2 = [ 0, 1, 10000, 5.5 ]
+ 
