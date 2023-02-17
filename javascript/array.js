@@ -78,28 +78,28 @@ console.log(numsSquare);
 
 
 
-// // ARRAY PROPERTIES
-// //1. length --> It is ARRAY PROPERTY that will tells the size of an array (means total no.of elements present in an array)
-// console.log(arr1.length);
-// console.log( typeof(arr1[6]), arr1[6]);   
+// ARRAY PROPERTIES
+//1. length --> It is ARRAY PROPERTY that will tells the size of an array (means total no.of elements present in an array)
+console.log(arr1.length);
+console.log( typeof(arr1[6]), arr1[6]);   
 
 
-// // ARRAY METHODS*************************************************
+// ARRAY METHODS*************************************************
 
-// // 1. push -- It is a method  that added the element to an array at the last.
-// arr1.push(59393);                         // syntax -->       array_Name.push(data);
-// console.log(arr1);
+// 1. push -- It is a method  that added the element to an array at the last.
+arr1.push(59393);                         // syntax -->       array_Name.push(data);
+console.log(arr1);
 
-// //2. pop -- It is a method that is used to remove an element from an array at the last
-// arr1.pop();                            //Syntax -->          array_Name.pop();
-// console.log(arr1);
+//2. pop -- It is a method that is used to remove an element from an array at the last
+arr1.pop();                            //Syntax -->          array_Name.pop();
+console.log(arr1);
 
-// //3. shift -- It is a method that is used to remove an element from an array at the start (it is similiar to the pop but the subtle difference is that it removed from the start)
-// arr1.shift();                            //Syntax -->          array_Name.shift();
-// console.log(arr1);
+//3. shift -- It is a method that is used to remove an element from an array at the start (it is similiar to the pop but the subtle difference is that it removed from the start)
+arr1.shift();                            //Syntax -->          array_Name.shift();
+console.log(arr1);
 
-// //4. unshift   --> It is a method  that added the element to an array at the start.(similiar to the push but it added at the start)
-// arr1.unshift("unshift");                         // syntax -->       array_Name.unshift(data);
-// console.log(arr1);
+//4. unshift   --> It is a method  that added the element to an array at the start.(similiar to the push but it added at the start)
+arr1.unshift("unshift");                         // syntax -->       array_Name.unshift(data);
+console.log(arr1);
 
 
