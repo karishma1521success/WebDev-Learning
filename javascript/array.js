@@ -116,9 +116,17 @@ arr2.splice(2,1);    // It is telling to delete the element at index 2 and only 
 console.log(arr2);    // arr2 = [ 1, 3,7, 86, 45, 0, 5.5]
 
 arr2.splice(3,3);    // It tell to delete the 3 elements starting from index 3 including 3rd index element.
-console.log(arr2);
+console.log(arr2);     // arr2=[ 1, 3, 7, 5.5 ]
 
-arr2.splice(1);     // Here I have not given delete count so it will remove all the elements from index1 include
-console.log(arr2);
+// arr2.splice(1);     // Here I have not given deleteCount so it will remove all the elements from index1 include
+// console.log(arr2);
 
+
+// delete an element and replace it with a new element at same index
+arr2.splice(2,1,10000);  /// It deletes an element at index2 and replace with the 10000
+console.log(arr2);        // arr2= [ 1, 3, 10000, 5.5 ]
+
+// delete mulitple elements and replace it with a multiple element at their respective indexes.
+arr2.splice(0,2,0,1);    // here It deletes the element at index 0 and 1 because delete count is 2 and replace with the 0 and 1 at index 0 and index 1 respectively
+console.log(arr2);
 
