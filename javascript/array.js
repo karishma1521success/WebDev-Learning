@@ -110,7 +110,7 @@ console.log(arr1);
 
 
 //5. splice -- It is a method that delete an element at any index.
-// syntax --  array_Name.slice(index,deleteCount);
+// syntax --  array_Name.slice(index,deleteCount, (items to added or replace items));
 let arr2 = [1,3,4,7,86,45,0,5.5];
 arr2.splice(2,1);    // It is telling to delete the element at index 2 and only the one element
 console.log(arr2);    // arr2 = [ 1, 3,7, 86, 45, 0, 5.5]
