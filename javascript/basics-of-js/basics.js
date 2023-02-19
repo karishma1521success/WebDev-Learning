@@ -1,5 +1,5 @@
 // topics -  variables, declaration + initilization , alert, propmt , confirm and parseInt() method
-
+//printing in js
 console.log("hello from intro.js file");
 
 let num = prompt("Enter the number");     // declaration  + initilization
@@ -27,6 +27,13 @@ document.write(num);    // print + cursor on the same line( just as System.out.p
 
    // variables in js *****************************************************************
    // we have 3 keywords for declaring the variable in js latest version that are     let, var and const
+   /*variable in js	let  variable_Name =  value																								
+	                  Rule for naming a variable in JavaScript																								
+	1. Name should start with either _ (underscore), alphabet, or $(dollar sign) in js																								
+	2.  Name only contains _ , alphabet, number and $																								
+	3. having camel case convention																								
+	4. doesn't contain any white spaces		
+  */																						
 
    //Hoisting:   It moves the function, variable and class value to the top of their scope.
 
