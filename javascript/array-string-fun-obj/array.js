@@ -155,5 +155,47 @@ let original2 = [3,5,9,0,14,5,76,7,8];
 let concatenateArray = [...original1,...original2];
 console.log(concatenateArray);
 
-
+//*************************************************************************************** */
 //7. sort() == It is a method to sort the whole array in the ascending order or descending order
+
+// array_name.sort(function(a,b){return a-b});   -- for sorting the numeric array in ascending order
+// array_name.sort(function(a,b){return b-a});   -- for sorting the numeric array in the descending order
+// array_name.sort()   -- It will sort the string array on the basis of alphabetically order
+// array_name.sort(function(a,b){return a.key - b.key}) - to sort the array of objects using a particular key(note only work for numeric key values); (this function is built to sort the numeric values only)
+let sortAsc = [23,4,-7,0,55,90,9847,0,-6];
+sortAsc.sort(function(a,b){return a-b});
+console.log(sortAsc);
+
+let sortDes = [23,4,-7,0,55,90,9847,0,-6];
+sortDes.sort(function(a,b){return b-a});
+console.log(sortDes);
+
+let fruits = ["papaya","banana","orange","apple"];
+fruits.sort();
+console.log(fruits);
+
+const cars = [
+    {type:"Volvo", year:2016},
+    {type:"Saab", year:2001},
+    {type:"BMW", year:2010}
+  ];
+
+  cars.sort(function(a,b){return a.year - b.year}) // sort the whole array on the basis of year in ascending order
+  console.log(cars);
+
+;
+
+//8. reverse() - it is a function to reverse the whole array
+sortAsc.reverse();
+console.log(sortAsc);
+
+//9. Math.max()-maximum number in an array      Math.min() = method to find minimum number in an array
+//syntax -- Math.max.apply(null,array_name);     Math.min.apply(null,array_name);
+let array3 = [4,87,-3,0,88,9,-2];
+let min  = Math.min.apply(null,array3);
+console.log(min);
+
+let max = Math.max.apply(null,array3);
+console.log(max);
+
+// but it will take tc = o(nlogn) so it can be done in O(n) by using for loop
