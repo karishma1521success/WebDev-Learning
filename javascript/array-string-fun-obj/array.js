@@ -129,4 +129,31 @@ console.log(arr2);        // arr2= [ 1, 3, 10000, 5.5 ]
 // delete mulitple elements and replace it with a multiple element at their respective indexes.
 arr2.splice(0,2,0,1);    // here It deletes the element at index 0 and 1 because delete count is 2 and replace with the 0 and 1 at index 0 and index 1 respectively
 console.log(arr2);           // arr2 = [ 0, 1, 10000, 5.5 ]
+
+
+//6. concat()  - It is a method of merging two existing array
+let array1 = [2,3,4,"hello", "bye",true];
+let array2 = [3,4,"ola", "heyyy"];
+let concatArray = array1.concat(array2);
+console.log(concatArray);
+
+// this same can be done by using create deep copy
+
+// IF i WANT TO COPY THE WHOLE ARRAY THEN WE HAVE TWO WAYS TO COPY 
+//1. SWALLOW COPY -- IF WE CREATE COPY OF ORIGINAL ARRAY THEN IF WE DO CHANGES IN COPY ARRAY IT WILL REFLECT ON ORIGINAL ARRAY TOO AND VICE VERSA
+//2. DEEP COPY-- IT WE CREATE COPY OF ORIGINAL ARRAY THEN IF WE DO CHANGES IN COPY ARRAY IT WILL NOT REFLECT ON ORIGINAL ARRAY AND VICE VERSA TOO 
  
+// SO WE WANT TO MAKE ALWAYS A DEEP COPY THIS CAN BE CREATE USING SPREAD OPERATOR
+let originalArray = [1,2,3,4];
+let copyArray = [...originalArray];
+console.log(copyArray);
+
+// we can create a deep copy of two array at once in a single array(means concatenation)
+let original1 = [1,4,6,7,45,5,6,6];
+let original2 = [3,5,9,0,14,5,76,7,8];
+
+let concatenateArray = [...original1,...original2];
+console.log(concatenateArray);
+
+
+//7. sort() == It is a method to sort the whole array in the ascending order or descending order
