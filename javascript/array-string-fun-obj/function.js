@@ -33,8 +33,9 @@ let a = function sub(a,b){                                   //here we store the
             return a-b;
         }  
 
-        //now we can call the function by the call of variable too
+        //now we can call the function by the call of variable only in this case we cannot call the function by its name now (imp)
         console.log(a(3,1));
+        // sub(a,b) --invalid 
 
 // IIFE - Immediately Invoked Function Expression
 // syntax--                   (function(parameters){ block of code})();              // no function name in IIFE
