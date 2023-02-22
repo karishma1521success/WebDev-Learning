@@ -28,7 +28,7 @@ let mulAns = mul(2,3);                // calling of a function
 console.log(mulAns);
 
 //IMP -- 
-//storing a function into the variable*********************************************************************
+//storing a function into the variable called FUNCTION EXPRESSION*********************************************************************
 let a = function sub(a,b){                                   //here we store the function into the variable and -- --                                                                the output will store to the variable a.
             return a-b;
         }  

@@ -32,7 +32,7 @@ obj1.name = "karishma";
 console.log(obj1);
 
 
-// create a key-value pair injs
+// create a key-value pair in js
 // syntax is obj_name["key_name"] = value; (means we want to add another key value pair in objec_name)
 obj1["addObj"] = "addedObject";
 console.log(obj1);
@@ -62,3 +62,29 @@ for(let i=0; i<keys.length; i++){
 keys.forEach(function (key) {
     console.log(key +": " + obj1[key]);
 });
+
+
+// Methods of object
+
+
+
+
+
+
+
+
+
+
+
+
+// IF i WANT TO COPY THE WHOLE object THEN WE HAVE TWO WAYS TO COPY 
+//1. SWALLOW COPY -- IF WE CREATE COPY OF ORIGINAL object THEN IF WE DO CHANGES IN COPY ARRAY IT WILL REFLECT ON ORIGINAL ARRAY TOO AND VICE VERSA
+//2. DEEP COPY-- IT WE CREATE COPY OF ORIGINAL objects THEN IF WE DO CHANGES IN COPY ARRAY IT WILL NOT REFLECT ON ORIGINAL ARRAY AND VICE VERSA TOO 
+ 
+// SO WE WANT TO MAKE ALWAYS A DEEP COPY THIS CAN BE CREATE USING SPREAD OPERATOR
+//1. first create a new object   2. use spread operator   syntax --  let newObj = {...obj_name};
+let originalObj = {id:1, name:"doaremon"};
+let copyObj = {...originalObj};
+console.log(copyObj);
+
+//note: we cannot concatenate two objects. 
