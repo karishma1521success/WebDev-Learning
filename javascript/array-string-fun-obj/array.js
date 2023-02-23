@@ -200,3 +200,34 @@ let max = Math.max.apply(null,array3);
 console.log(max);
 
 // but it will take tc = o(nlogn) so it can be done in O(n) by using for loop
+
+
+
+// Imp -- Array destructing
+
+let array_1 = [1,2,3];
+//now let's say we want to assign values to differnt variables
+let x = array_1[0];
+let y = array_1[1];
+let z = array_1[2];
+
+// But Instead of above javascript has special function to assign all the values of an array to different array at together
+// let [A,B,C] = [1,2,3];
+let [A,B,C] = array_1;    // this doing the same work as let [A,B,C] = [1,2,3]
+console.log(A);   // It will console arrary_1[0]
+console.log(B);
+console.log(C);
+
+// let's say if we have more variables but less values then it will return undefined to that variable
+let array_2 = [1,2,3,4];
+let [V,W,X,Y,Z] = [1,2,3,4];  // here clearly  variable are 5 but elements in an array is only 4 so for the last variable it will return the undefined
+console.log(Y);   // array_2[3]
+console.log(Z);   // return undefined
+
+// JavaScript assign value from starting to end one by one to differnet variables
+
+//Imp - let's say If you want to assign only 1st , 3rd and the 6 element of an array
+let [s,,t,,,u] = [1,2,3,4,5,6];   // another syntax  let[s,_,t,_,_,u];   (this underscore defines the empty place for leaving that particular index element of an array)
+console.log(s);
+console.log(t);
+console.log(u);
