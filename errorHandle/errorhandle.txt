@@ -1,8 +1,0 @@
-
-**  Uncaught TypeError: Cannot read properties of null (reading 'addEventListener')
-   [This error occur due to  1.cannot access the element   2. script tag is written on the wrong place]
-    Handle by -- 1. check that accessing the correct html element.
-             2. check the script tag
-
-
-**
