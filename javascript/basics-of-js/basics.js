@@ -33,7 +33,9 @@ document.write(num);    // print + cursor on the same line( just as System.out.p
 	2.  Name only contains _ , alphabet, number and $																								
 	3. having camel case convention																								
 	4. doesn't contain any white spaces		
-  */																						
+  */					
+ 
+  // VARIABLE CAN STORE 1. NUMBERS   2. STRINGS  3. BOOLEAN  4. ARRAY    5. OBJECT  6. FUNCTION 
 
    //Hoisting:   It moves the function, variable and class value to the top of their scope.
 
