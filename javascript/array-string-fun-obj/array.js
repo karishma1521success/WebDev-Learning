@@ -1,3 +1,7 @@
+// Topics covered --  1. Declaration of an array       2. looping ways in an array (for loop , forEach(), forMap(), for(var value of arr_Name))
+// 3. Array Methods & properties   (length, push(), pop(), shift(), unshift(), splice(), concat() / (spread operator), sort(), reverse(), Math.max.apply(null,arr_Name), Math.min.apply(null, arr_name), arr_Name.find() , arr_Name.findIndex() , filter() 
+//4. Array destructing --  let [a,b,c] = [1,2,3,4]
+
 // array in js is a object which is used to store the muliple values together in a single variable.
 // You can have objects in an Array. You can have functions in an Array. You can have arrays in an Array:
 
@@ -71,10 +75,14 @@ let nums = [1,2,3,4];
  let numsSquare = nums.map(function (value){
     return value*value;
 })
-
 console.log(numsSquare);
 
 
+//4.  for(var value of array_name){}
+let new_Arr = [1,2,3,90,7,8];
+for(let value of new_Arr){
+    console.log(value);
+}
 
 
 
@@ -201,33 +209,55 @@ console.log(max);
 
 // but it will take tc = o(nlogn) so it can be done in O(n) by using for loop
 
+//10. find() - It is a method to check whether that element is present or not in an array     syntax - array_name.find(function);
+// check if 67 is present in an array or not   (so this can be do by for loop but javascript has in-built function to check this)
+let findArr = [1,2,3,4,67,89,0,76];
+let isExist = findArr.find(function (value) {
+    return value == 67;        // note -- find() will return value if it is find otherwise if it is not present it will return the undefined.
+})
+console.log(isExist);
+
+// find the index of 0 element in findArr
+//11.  findIndex() - It is a method to return the index of find element if it is present or if find element is not present it will return -1
+// syntax -   array_name.findIndex(function);
+let findIndx = findArr.findIndex(function (value){return value == 0});
+console.log(findIndx);
+
+// remove all the even element in an findArr          (so we add all the odd element in filter new array and all the even array is not there )
+// 12. filter() -- it is method which return the new array           (we can remove in an original array because it affect the indexes so we have to make a new array)
+ let newArr = findArr.filter(function (value) {
+    if(value % 2 != 0){ // odd value
+        return value;
+    }
+ })
+console.log(newArr);
 
 
-// Imp -- Array destructing
+// // Imp -- Array destructing
 
-let array_1 = [1,2,3];
-//now let's say we want to assign values to differnt variables
-let x = array_1[0];
-let y = array_1[1];
-let z = array_1[2];
+// let array_1 = [1,2,3];
+// //now let's say we want to assign values to differnt variables
+// let x = array_1[0];
+// let y = array_1[1];
+// let z = array_1[2];
 
-// But Instead of above javascript has special function to assign all the values of an array to different array at together
-// let [A,B,C] = [1,2,3];
-let [A,B,C] = array_1;    // this doing the same work as let [A,B,C] = [1,2,3]
-console.log(A);   // It will console arrary_1[0]
-console.log(B);
-console.log(C);
+// // But Instead of above javascript has special function to assign all the values of an array to different array at together
+// // let [A,B,C] = [1,2,3];
+// let [A,B,C] = array_1;    // this doing the same work as let [A,B,C] = [1,2,3]
+// console.log(A);   // It will console arrary_1[0]
+// console.log(B);
+// console.log(C);
 
-// let's say if we have more variables but less values then it will return undefined to that variable
-let array_2 = [1,2,3,4];
-let [V,W,X,Y,Z] = [1,2,3,4];  // here clearly  variable are 5 but elements in an array is only 4 so for the last variable it will return the undefined
-console.log(Y);   // array_2[3]
-console.log(Z);   // return undefined
+// // let's say if we have more variables but less values then it will return undefined to that variable
+// let array_2 = [1,2,3,4];
+// let [V,W,X,Y,Z] = [1,2,3,4];  // here clearly  variable are 5 but elements in an array is only 4 so for the last variable it will return the undefined
+// console.log(Y);   // array_2[3]
+// console.log(Z);   // return undefined
 
-// JavaScript assign value from starting to end one by one to differnet variables
+// // JavaScript assign value from starting to end one by one to differnet variables
 
-//Imp - let's say If you want to assign only 1st , 3rd and the 6 element of an array
-let [s,,t,,,u] = [1,2,3,4,5,6];   // another syntax  let[s,_,t,_,_,u];   (this underscore defines the empty place for leaving that particular index element of an array)
-console.log(s);
-console.log(t);
-console.log(u);
+// //Imp - let's say If you want to assign only 1st , 3rd and the 6 element of an array
+// let [s,,t,,,u] = [1,2,3,4,5,6];   // another syntax  let[s,_,t,_,_,u];   (this underscore defines the empty place for leaving that particular index element of an array)
+// console.log(s);
+// console.log(t);
+// console.log(u);
