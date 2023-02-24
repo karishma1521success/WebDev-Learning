@@ -39,19 +39,36 @@ let a = function sub(a,b){                                   //here we store the
         // sub(a,b) --invalid  (if we cannot no longer call the function by it's name in function expression there is not compulsory to give the function name)
         let b = function (a,b){              // imp - those function who don't have name that called as UNANIMOUS FUNCTION
             return a-b;
-        } // can be write function expression like this too.
+        } // we can write function expression like this too.without the function name.
 
 // IIFE - Immediately Invoked Function Expression
 // syntax--                   (function(parameters){ block of code})();              // no function name in IIFE
 
-(function(){
+(function (){
     console.log("hello from IIFE");    // IIFE without the parameters
 })();
 
-(function(a,b){
+(function (a,b){
    let c= a*b;
    console.log(c);                  // function with the parameters
 })(3,4); 
+
+
+
+// HIGHER ORDER FUNCTIONS  - It is that function which has function in parameters (means function is passed as an arguments)
+// syntax -   function function_name(function){}          calling    function_name(function);
+function paraFunction(a,b){
+    return a+b;
+}
+
+function higherFunction (para_Function){
+   let sum =  para_Function(1,2);
+   return sum;
+}
+ // note -- we dont call the function in arguments and the parameters. we just pass the function name.
+let ans = higherFunction(paraFunction);
+console.log(ans);
+
  
 
 // create a function which recieve n numbers arguments and return it's sum 
