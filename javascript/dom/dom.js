@@ -1,3 +1,8 @@
+// topics - 1. access html elements(via tagName, className and Id name)    2. accessing & manipulate the content of html element (using textContent, innerHTML)
+//3. create an html element by js and add to doucment using js at the end or b/w
+//4. accesing the class of an html element using js[classList] and add the class to it [.classList.add('class_name')]
+//5. styling the html elements using js
+
 //***************************************************** */
 // Dom methods to accesing the html elements
 
@@ -104,3 +109,19 @@ document.getElementById('head2').classList.add('add'); // this will find a html 
 document.getElementById('head2').style.color='red';
 document.getElementsByClassName('head1')[0].style.color='rgb(1,102,102)';
 document.getElementsByClassName('para1')[0].style.fontSize = '40px';
+
+
+// Accesing the html elements attributes
+//syntax   document.getElementById('id').attribtueName
+let buttonTurnOn = document.getElementById('turnOn');
+let bulbImg = document.getElementById('myImage');
+console.log(bulbImg.src);      // accesing the img attribute 
+buttonTurnOn.addEventListener('click' , function (){    // adding event listener on button
+    bulbImg.src="https://www.w3schools.com/js/pic_bulbon.gif";   // maniputlating the scr atttriubte of img
+})
+
+
+let buttonTurnOff = document.getElementById('turnOff');
+buttonTurnOff.addEventListener('click' , function(){
+    bulbImg.src = 'https://www.w3schools.com/js/pic_bulboff.gif';
+})
