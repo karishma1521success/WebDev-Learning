@@ -10,6 +10,10 @@ console.log(str1);
 // 1. length -- It returns the size of the string (total no. of characters in a string)
 console.log(str1.length);                        //syntax is same as for array [ str_Name.length]
 
+//2. charAt(index) - To find the character at partiuclar index
+let char1 = str1.charAt(5);
+console.log(char1); 
+
 //2. slice -- It returns the substring 
 // syntax --       str_Name.slice(index)  ---->   This will give substring from index value (include) to last(include)
 //                 str_Name.slice(startIndex,lastIndex);     (substring from startIndex(include) to  lastIndex(exclude))
@@ -41,3 +45,4 @@ let firstName = "karishma ";
 let lastName = "Gupta";
 let concatStr = firstName.concat(lastName);
 console.log(concatStr);
+
