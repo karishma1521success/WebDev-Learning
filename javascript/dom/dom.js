@@ -73,7 +73,7 @@ anchor.textContent = "hello new created anchor tag by dom";  // now anchor varia
 
 // ***we can SET THE ATTRIBUTE to the html element let say we want anchor tag have attribute target = _blank 
 anchor.setAttribute("target" , "_blank");
-console.log(anchor);
+console.log(anchor);//<a target="_blank">hello new created anchor tag by dom</a>
 
 
 // ADD HTML ELEMENT TO THE HTML DOCUMENT --- add using .appendChild(htmlelement); property
