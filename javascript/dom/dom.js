@@ -71,6 +71,11 @@ let anchor = document.createElement('a');  // creates a anchor tag with <a></a> 
 anchor.textContent = "hello new created anchor tag by dom";  // now anchor variable = <a>hello new created anchor tag by dom</a>
 // but note it only created by dom not added on the web page or html document
 
+// ***we can SET THE ATTRIBUTE to the html element let say we want anchor tag have attribute target = _blank 
+anchor.setAttribute("target" , "_blank");
+console.log(anchor);
+
+
 // ADD HTML ELEMENT TO THE HTML DOCUMENT --- add using .appendChild(htmlelement); property
 //1. access html element parent where you want to add this new html element as a child element
 //2. then  parentElemnt.appendChild(NewHtmlElement);
