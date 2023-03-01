@@ -130,3 +130,7 @@ let buttonTurnOff = document.getElementById('turnOff');
 buttonTurnOff.addEventListener('click' , function(){
     bulbImg.src = 'https://www.w3schools.com/js/pic_bulboff.gif';
 })
+
+
+// add icon 
+// element_name.innerHTML += ' <i class="fas fa-edit"></i>';  (using inner.html)
