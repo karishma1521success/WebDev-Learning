@@ -10,3 +10,6 @@ document.getElementById('btn').addEventListener('click',alertShow);
 function sayHello(){
     alert("hello using the onclick attribute from say hello function");
 }
+
+
+//IMP -- event.preventDefault() - used to prevent from reloadation of page.
