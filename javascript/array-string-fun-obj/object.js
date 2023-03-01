@@ -1,3 +1,7 @@
+//Topics - 1. declaration of an object     2. Ways of creating an object     3. Acessing value of key and manipulating 
+//4. create new key-value pair / delete existing pair    //5.Acessing all the keys    //6. accessing all the values       // acessing all the key-value pairs
+//7. creating obj with interchanging key-value pair       //8. creating deep copy of an object
+
 //  object is a key-value pair entity
 
 let obj = {}   // empty object
@@ -41,12 +45,12 @@ console.log(obj1);
 // delete a key from an object in js
 // syntax  delete obj_name["key"];
 
- delete obj1["name"];   // this will delete a key:value of name from an object
+delete obj1["name"];   // this will delete a key:value of name from an object
 console.log(obj1);
 
 
 // accessing all the keys of an object in js 
-// we have a function which is Object.keys(obj_name); (this function return an array)
+// we have a function which is Object.keys(obj_name); (this function return an array of all they keys)
 
 let keys = Object.keys(obj1);
 console.log(keys);
@@ -63,10 +67,46 @@ keys.forEach(function (key) {
     console.log(key +": " + obj1[key]);
 });
 
+// acessing all the value of object
+console.log(obj1);
+let values = Object.values(obj1);   // It will return an array of all the values of an object
+console.log(values);
 
-// Methods of object
+
+// acessing all the key:value pairs of an object
+// obj1 = { age: 23, gender: 'female', height: '5.0ft', addObj: 'addedObject' }
+let key_Value = Object.entries(obj1);   // return array of an array of key value pair 
+console.log(key_Value);
+//ans - key_value = [ [ 'age', 23 ], [ 'gender', 'female' ],[ 'height', '5.0ft' ], [ 'addObj', 'addedObject' ]]
 
 
+/**  NEW OBJECT WITH INTERCHANGING OF KEY-VALUE PAIR OF ORIGINAL OBJECT
+ *  obj[key] = value;
+ *  Given a object create a new object with interchanging keys and value
+ *  { "name" : "rahul",
+ *     age : 24
+ * } 
+ * 
+ * {
+ *  "rahul": "name",
+ *   24 : age
+ * }
+ */
+
+var user = {
+    name : "Rahul",
+    age: 24
+};
+var userKeys = Object.keys(user); //["name", "age"]
+
+var updatedUser = {};
+
+userKeys.forEach(function (key) { // "name"
+    var value = user[key] // rahul
+  updatedUser[value] = key; // updatedUser["rahul"] = "name"
+});
+
+console.log(updatedUser);
 
 
 
