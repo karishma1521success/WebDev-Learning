@@ -12,4 +12,4 @@ function sayHello(){
 }
 
 
-//IMP -- event.preventDefault() - used to prevent from reloadation of page.
+//IMP -- event.preventDefault() - used to prevent from reloadation of page
