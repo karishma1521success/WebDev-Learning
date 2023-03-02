@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <form id="form">
+            <label for="name">Name</label>
+            <input type="text" name="name" id="name" data-testid="name" ><br>
+            <label for="email">Email Address</label>
+            <input type="email" name="Email" id="email" data-testid="email">
+            <div id="emailError"></div>
+            <label for="gender">Gender</label>
+            <Select data-testid="gender" id="gender">
+                <option value="male" selected>Male</option>
+                <option value="female">Female</option>
+            </Select><br>
+            <label for="phone">Phone Number</label>
+            <input type="tel" name="phone" id="phone" data-testid="phoneNumber"><br>
+            <label for="password">Password</label>
+            <input type="password" name="password" id="password" data-testid="password"><br>
+            <input type="submit" value="submit" id="submit" data-testid="submit">
+        </form>
+        
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>
