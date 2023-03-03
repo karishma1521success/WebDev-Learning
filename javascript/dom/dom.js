@@ -93,6 +93,10 @@ parent.insertBefore(span,childElement);    //childElement - It is that element a
 //span - new created element        // parent - It is that element which is child of span and childElement
 
 
+///DELETING AN HTML ELEMENT USING JS (USE remove())   syntax - element_name.remove();
+
+span.remove();
+
 
 //ACCESSING CLASS OF AN HTML ELEMENT USING DOM
 //1. Access an html element where you want to add the class 
