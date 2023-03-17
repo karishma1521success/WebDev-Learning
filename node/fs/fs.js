@@ -22,6 +22,6 @@ fs.appendFileSync(newFilePath, "hey I am update content");
 
 //D - Delete
 // It will delete the file (needs one arguments 1. file)
-fs.unlinkSync(newFilePath);
+// fs.unlinkSync(newFilePath);
 
 
