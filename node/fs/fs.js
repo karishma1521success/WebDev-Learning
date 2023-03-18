@@ -1,5 +1,14 @@
+/**
+ * Common use for the File System module:
+Read files
+Create files
+Update files
+Delete files
+Rename files
+ */
+
 let fs = require('fs');   // This will also return an object [this module tells about related to file system]
-console.log(fs);
+console.log(fs);          // require does 1. read file   2. exectue file  3. return an object which module.exports contains
 // we can perfom CRUD operation using fs module
 
 let pathFile = require('path');

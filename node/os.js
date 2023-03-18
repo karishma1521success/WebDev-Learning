@@ -1,4 +1,4 @@
-let os = require('os');
+let os = require('os');  // require does 1. read file   2. exectue file  3. return an object which module.exports contains
 console.log(os);  // This will return the object and this method is used for getting the details about operating system
 
 console.log(os.hostname());  // This will return the hostname of an os (in my case it's returning karishma)

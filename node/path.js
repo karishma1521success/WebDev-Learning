@@ -1,6 +1,6 @@
 // "E:\Carrer\weblearning\node\path.js"
 let path = require('path'); // returns an object
-console.log(path);
+console.log(path);           // require does 1. read file   2. exectue file  3. return an object which module.exports contains
 
 // returns an extension of the file (ex .js)
 let extentsion = path.extname("E:\Carrer\weblearning\node\path.js"); // takes a argument of file's path
