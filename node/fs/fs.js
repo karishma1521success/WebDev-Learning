@@ -33,4 +33,31 @@ fs.appendFileSync(newFilePath, "hey I am update content");
 // It will delete the file (needs one arguments 1. file)
 // fs.unlinkSync(newFilePath);
 
+// CRUD FOR DIRECTORY ***************************************************
+//I want to create a new directory for that I want to create the new directory path
+// C - create for directory
+let newDirPath = pathFile.join(__dirname , "newDirectory");
+console.log(newDirPath);
+if(!fs.existsSync(newDirPath)){      // fs.existSync(path) - is method to check whether directory if present or not
+    fs.mkdirSync(newDirPath);   // This will created a new Directory in same folder where this file exist   
+}
+
+// now I am adding a file in the new created directory 
+
+let dirFilePath = pathFile.join(newDirPath, "dirFilePath.txt");
+console.log(dirFilePath);
+
+fs.writeFileSync(dirFilePath , "heyy I can new created file inside the new Created directory using ");
+
+
+//R - read operation of Directory
+let readDir = fs.readdirSync(newDirPath , 'utf-8');
+console.log(readDir);
+//but if this directory with the same name is existed already then it will give an error-- This will resolve by setting the condition in if block
+//D- delelte for directory
+// fs.rmdirSync(newDirPath);
+
+let jsPath = "E:\Carrer\weblearning\javascript";
+console.log(fs.readdirSync(jsPath));
+
 

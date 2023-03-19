@@ -18,4 +18,4 @@ console.log(directoryName);
 let filePath = __filename; 
 console.log(filePath);
 
-console.log(path.join(directoryName,"karishma.js"));
+console.log(path.join(directoryName,"karishma.js"));   //join returns the path in string format
