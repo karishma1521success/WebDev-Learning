@@ -33,6 +33,13 @@ fs.appendFileSync(newFilePath, "hey I am update content");
 // It will delete the file (needs one arguments 1. file)
 // fs.unlinkSync(newFilePath);
 
+//Copy a file  - We need two things 1. source path    2. destination path
+let sourcePath = pathFile.join(__dirname,"newFile.txt");
+console.log(sourcePath);
+let destinationPath = pathFile.join("E:\\Carrer\\weblearning\\node","childprocess","newFile.txt");
+fs.copyFileSync(sourcePath, destinationPath);
+
+
 // CRUD FOR DIRECTORY ***************************************************
 //I want to create a new directory for that I want to create the new directory path
 // C - create for directory
@@ -40,6 +47,7 @@ let newDirPath = pathFile.join(__dirname , "newDirectory");
 console.log(newDirPath);
 if(!fs.existsSync(newDirPath)){      // fs.existSync(path) - is method to check whether directory if present or not
     fs.mkdirSync(newDirPath);   // This will created a new Directory in same folder where this file exist   
+//but if this directory with the same name is existed already then it will give an error-- This will resolve by setting the condition in if block
 }
 
 // now I am adding a file in the new created directory 
@@ -51,13 +59,15 @@ fs.writeFileSync(dirFilePath , "heyy I can new created file inside the new Creat
 
 
 //R - read operation of Directory
-let readDir = fs.readdirSync(newDirPath , 'utf-8');
+let readDir = fs.readdirSync(newDirPath);
 console.log(readDir);
-//but if this directory with the same name is existed already then it will give an error-- This will resolve by setting the condition in if block
-//D- delelte for directory
-// fs.rmdirSync(newDirPath);
+let javascript = "E:\\Carrer\\weblearning\\javascript";      //In our os it has only single forward slash but that's not working so we add one more slash then it's start working
+console.log(fs.readdirSync(javascript));
 
-let jsPath = "E:\Carrer\weblearning\javascript";
-console.log(fs.readdirSync(jsPath));
+//D- delelte for directory
+// fs.rmdirSync(newDirPath);   // this works best for empty directory only and for non-empty directory this will give an error
+//For deleting non-empty directory use this function
+// fs.rmdirSync(newDirPath,{recursive:true});
+
 
 
