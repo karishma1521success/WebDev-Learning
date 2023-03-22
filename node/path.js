@@ -19,3 +19,14 @@ let filePath = __filename;
 console.log(filePath);
 
 console.log(path.join(directoryName,"karishma.js"));   //join returns the path in string format
+
+
+// if I want to go backword in path then use '..' (double dot) let say
+let filepath = __filename;
+console.log(filepath);    // return E:\Carrer\WEBLEARNING\node\path.js 
+// if I want this E:\Carrer\WEBLEARNING\node - (means one backward then use .. )
+let backPath = path.join(filePath, '..');
+console.log(backPath);
+
+let doublebackPath = path.join(filePath, '..' , '..');
+console.log(doublebackPath);
