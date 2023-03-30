@@ -55,6 +55,8 @@ let a = function sub(a,b){                                   //here we store the
 
 
 
+
+
 // HIGHER ORDER FUNCTIONS  - It is that function which has function in parameters (means function is passed as an arguments)
 // syntax -   function function_name(function){}          calling    function_name(function);
 function paraFunction(a,b){

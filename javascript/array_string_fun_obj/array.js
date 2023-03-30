@@ -224,7 +224,7 @@ let findIndx = findArr.findIndex(function (value){return value == 0});
 console.log(findIndx);
 
 // remove all the even element in an findArr          (so we add all the odd element in filter new array and all the even array is not there )
-// 12. filter() -- it is method which return the new array           (we can remove in an original array because it affect the indexes so we have to make a new array)
+// 12. filter() -- it is method which return the new array           (we can't remove in an original array because it affect the indexes so we have to make a new array)
  let newArr = findArr.filter(function (value) {
     if(value % 2 != 0){ // odd value
         return value;
