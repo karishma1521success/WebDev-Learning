@@ -10,7 +10,10 @@ console.log(date);
 // window.print() - method to print the window content 
 
 
-
+//To take an input from the terminal we have to use process.argv
+let input = process.argv;    // this will return an array = [nodeinstallpath, file_running_path, input_from_terminal]
+// so bascially we will get actual input from index 2 of array
+console.log(input);   
 
 
 
