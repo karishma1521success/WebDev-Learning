@@ -27,4 +27,4 @@ const c =20;     // we can't initilize const variable like this const c;   c=20;
  
 // c=30;              // In const re-initilization is not possible
 
-// const c= 30;        // In const re-declaration is alos not possible.
+// const c= 30;        // In const re-declaration is also not possible.
