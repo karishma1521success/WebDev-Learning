@@ -62,7 +62,7 @@ let a = function sub(a,b){                                   //here we store the
 function paraFunction(a,b){
     return a+b;
 }
-
+//note: If we pass the function as an argument that it is called callback function
 function higherFunction (para_Function){
    let sum =  para_Function(1,2);
    return sum;
