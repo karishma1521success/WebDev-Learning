@@ -36,6 +36,6 @@ function cb(error, response, body){
   //   console.log('statusCode:', response && response.statusCode); // Print the response status code if a response was received
     console.log('body:', body); // Print the HTML for the link website webpage.
     //now we want to extract the data from that Html file we got but that file is too large that to extract a particular data will be a very hectic task so to make this easy jsdom comes in picture to make the extract data task easy
-    
+    //how jsdom works - we send the selector to js dom and js dom on that basis of selector it searcch that element having those selectors and gives that element as response.
      }
 }
