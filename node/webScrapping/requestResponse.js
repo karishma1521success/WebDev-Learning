@@ -9,6 +9,9 @@ Parsing the data to extract the exact information that we want from the data.
 //1. Now to make a request node has a module name - request but it is not pre-installed in node like path, fs so firstly we have to install the module (request) by using npm(node package manager which works like a playstore in android) [[ to install use command -->   npm install request     or  npm i request   ]]
 
 const request = require('request');
+const jsdom = require('jsdom');
+const {JSDOM} = jsdom;  // this is for accesing all the keys of jsdom object moudle
+
 /*
 console.log(request);
 
@@ -37,5 +40,6 @@ function cb(error, response, body){
     console.log('body:', body); // Print the HTML for the link website webpage.
     //now we want to extract the data from that Html file we got but that file is too large that to extract a particular data will be a very hectic task so to make this easy jsdom comes in picture to make the extract data task easy
     //how jsdom works - we send the selector to js dom and js dom on that basis of selector it searcch that element having those selectors and gives that element as response.
+
      }
 }
