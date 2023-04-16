@@ -32,14 +32,17 @@ request('http://www.google.com', function (error, response, body) {
 const link = "https://www.bing.com/cricketdetails?q=CSK%20vs%20LSG%20cricket&IsCricketV3=1&QueryTimeZoneId=India%20Standard%20Time&ResponseType=FullScore&Intent=None&Provider=SI&Lang=English&ScenarioName=SingleGame&CricketTournamentId=5157&GameId=222174&";
 
 request(link , cb)
-function cb(error, response, body){
+function cb(error, response, html){
    if(error){
       console.error('error:', error); // Print the error if one occurred
      }else{
   //   console.log('statusCode:', response && response.statusCode); // Print the response status code if a response was received
-    console.log('body:', body); // Print the HTML for the link website webpage.
+    console.log('body:', html); // Print the HTML for the link website webpage.
     //now we want to extract the data from that Html file we got but that file is too large that to extract a particular data will be a very hectic task so to make this easy jsdom comes in picture to make the extract data task easy
     //how jsdom works - we send the selector to js dom and js dom on that basis of selector it searcch that element having those selectors and gives that element as response.
+    const dom = new JSDOM(body);
+    const document = dom.window.document;
+
 
      }
 }
