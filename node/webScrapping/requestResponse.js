@@ -41,7 +41,7 @@ function cb(error, response, html){
     //now we want to extract the data from that Html file we got but that file is too large that to extract a particular data will be a very hectic task so to make this easy jsdom comes in picture to make the extract data task easy
     //how jsdom works - we send the selector to js dom and js dom on that basis of selector it searcch that element having those selectors and gives that element as response.
     const dom = new JSDOM(body);
-    const document = dom.window.document;
+    const document = dom.window.document;  // This is a document means actual content (in window we also have tab and other search bar in the html we don't want that we just want actual doucment )
 
 
      }
