@@ -42,7 +42,9 @@ function cb(error, response, html){
     //how jsdom works - we send the selector to js dom and js dom on that basis of selector it searcch that element having those selectors and gives that element as response.
     const dom = new JSDOM(html);
     const document = dom.window.document;  // This is a document means actual content (in window we also have tab and other search bar in the html we don't want that we just want actual doucment )
-    
+    const teamName = document.querySelectorAll('.ckt_match_teamname');
+    console.log(teamName[0].textContent);
+    console.log(teamName[1].textContent);
     
 
      }
