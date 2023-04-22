@@ -45,7 +45,7 @@ function cb(error, response, html){
     const teamName = document.querySelectorAll('.ckt_match_teamname');
     console.log(teamName[0].textContent);
     console.log(teamName[1].textContent);
-    
+    console.log("fetched team names");
 
      }
 }
