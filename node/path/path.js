@@ -29,4 +29,4 @@ let backPath = path.join(filePath, '..');
 console.log(backPath);  //This will give one backward path
 
 let doublebackPath = path.join(filePath, '..' , '..');
-console.log(doublebackPath);
+console.log(doublebackPath);  //This will give two backwards path.
