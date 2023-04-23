@@ -26,7 +26,7 @@ let filepath = __filename;
 console.log(filepath);    // return E:\Carrer\WEBLEARNING\node\path.js 
 // if I want this E:\Carrer\WEBLEARNING\node - (means one backward then use .. )
 let backPath = path.join(filePath, '..');
-console.log(backPath);
+console.log(backPath);  //This will give one backward path
 
 let doublebackPath = path.join(filePath, '..' , '..');
 console.log(doublebackPath);
