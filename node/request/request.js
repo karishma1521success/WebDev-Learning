@@ -1,6 +1,6 @@
 const request = require('request');
 
-request('http://www.google.com', cb);
+request('http://www.google.com', cb);  // Here link can be anything which we want to access
 
 function cb(error, response, html) {
     if(error){
@@ -10,4 +10,7 @@ function cb(error, response, html) {
    console.log('body:', html); // Print the HTML for the Google homepage.
     }
  }
+
+ //Just like we send a request to server from the browser we can do this the same thing with the help of node script file. 
+ 
  
