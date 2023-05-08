@@ -2,7 +2,7 @@
 const request = require('request');
 const jsdom  = require('jsdom');
 const {JSDOM} = jsdom;
-const link  = 'https://www.bing.com/cricketdetails?q=LSG%20vs%20RCB%20cricket&IsCricketV3=1&QueryTimeZoneId=India%20Standard%20Time&ResponseType=FullScore&Intent=None&Provider=SI&Lang=English&ScenarioName=SingleGame&TeamId0=1105&GameId=222215&'
+const link  = 'https://www.bing.com/cricketdetails?q=PBKS%20vs%20RCB%20cricket&IsCricketV3=1&QueryTimeZoneId=India%20Standard%20Time&ResponseType=FullScore&Intent=None&Provider=SI&Lang=English&ScenarioName=SingleGame&TeamId0=1105&GameId=222199&'
 
 
 function cb(error, response, html){
