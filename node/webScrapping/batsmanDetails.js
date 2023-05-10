@@ -39,7 +39,9 @@ function cb2(error,response,html){
     }else{
         const dom = new JSDOM(html);
         const document = dom.window.document;
+        //scraping getting null elements don't know why.
         //get name and details but I'm getting problems while scraping.
+
         
     }
 }
