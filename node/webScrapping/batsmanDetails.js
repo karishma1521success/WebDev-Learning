@@ -25,6 +25,7 @@ function cb(error,response,html){
                 batsmanLink  = batsmanLink.slice(0,indexOfSpace);
                 console.log( batsmanName, "------" , batsmanLink);
                 const completeLink = "https://www.bing.com" + batsmanLink;
+                //getting problems in scraping the exact link 
                 console.log(completeLink);
                 request(completeLink, cb2);
             }   
@@ -39,6 +40,7 @@ function cb2(error,response,html){
         const dom = new JSDOM(html);
         const document = dom.window.document;
         //get name and details but I'm getting problems while scraping.
+        
     }
 }
 
