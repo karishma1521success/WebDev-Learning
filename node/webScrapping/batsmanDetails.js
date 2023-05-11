@@ -21,7 +21,7 @@ function cb(error,response,html){
                 const batsmanName = batsmanLinkEle.textContent;
                 let batsmanLink = batsmanLinkEle.href; // get anchor href attribute value
                 let indexOfSpace = batsmanLink.indexOf(' ');
-                // console.log(indexOfSpace);
+                console.log(indexOfSpace);
                 batsmanLink  = batsmanLink.slice(0,indexOfSpace);
                 console.log( batsmanName, "------" , batsmanLink);
                 const completeLink = "https://www.bing.com" + batsmanLink;
@@ -41,7 +41,7 @@ function cb2(error,response,html){
         const document = dom.window.document;
         //scraping getting null elements don't know why.
         //get name and details but I'm getting problems while scraping.
-
+        
         
     }
 }
