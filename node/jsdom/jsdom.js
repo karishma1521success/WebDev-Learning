@@ -6,3 +6,6 @@ const dom = new JSDOM(html);
  // basic code to use jsdom
 
  //jsdom is used to get the data from the doucment.
+ // get href of a by accessing anchor tag using jsdom and then use ".href";
+let anchor = document.querySelector('a');
+let  link = anchor.href;
