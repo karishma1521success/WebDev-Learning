@@ -2,6 +2,7 @@ const request = require('request');
 const link = "https://www.espncricinfo.com/series/ipl-2021-1249214/match-schedule-fixtures-and-results";
 const jsdom = require('jsdom');
 const {JSDOM} = jsdom;
+const fs = require('fs');
 
 const leaderBoardArr = [];
 let counter = 0;
@@ -68,6 +69,10 @@ function cb2(error,response,html){
     if(counter == 0){
         console.log("All players processed");
         console.log(leaderBoardArr);
+        //now we have to make a json file in which leaderboard arr will consisit
+        //1. To make a json file we have to first require file module
+        let data = JSON.stringify(leaderBoardArr); // It will convert arr into the string because fs.writeFileSync function needs data to be in string format
+        fs.writeFileSync('batsmanStats.json' , data);
     }
 }
 }
