@@ -1,5 +1,5 @@
 // A JavaScript string is zero or more characters written inside quotes.
-
+//note - string is immutable means cannot be changed 
 let str = " "; // empty string(string with the 0 characters)
 console.log(str);
 

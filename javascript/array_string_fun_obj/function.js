@@ -86,3 +86,10 @@ function consoleN_numbers (...args) {
 
 consoleN_numbers(1,2,3,4,5,6,7);   //returns [1,2,3,4,5,6,7]
 console.log(sumOfN);
+
+
+//default parameter function ; 
+let hey = function (arr = ['a' , 'b']){
+    let sum = arr[0] + arr[1] + arr.length;
+    console.log(sum);
+}  // this arr in parameter will take as default parameter when no arguments will pass if pass then this default arr will not work

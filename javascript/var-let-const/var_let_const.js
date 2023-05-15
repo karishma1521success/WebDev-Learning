@@ -8,6 +8,7 @@ a=10;              // also in var  we can declare like this also     var a=10; (
 console.log(a);    
 a=12;              // re -initilization also possible in var keyword
 var a= 20;          // this re-declaration is also possible in var that will not give any error
+//var has functional scope
 
 
 //let keyword
@@ -19,6 +20,7 @@ console.log(b);
 b=20;           // re-intilization can be possible in let
 
 // let b=30;    // re-declaration is not possible in let if we do so then it will give an error
+//let has block scope
  
 
 //const keyword
@@ -28,3 +30,4 @@ const c =20;     // we can't initilize const variable like this const c;   c=20;
 // c=30;              // In const re-initilization is not possible
 
 // const c= 30;        // In const re-declaration is also not possible.
+//const has block scope.
