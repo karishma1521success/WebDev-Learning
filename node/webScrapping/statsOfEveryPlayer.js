@@ -3,6 +3,14 @@ const link = "https://www.espncricinfo.com/series/ipl-2021-1249214/match-schedul
 const jsdom = require('jsdom');
 const {JSDOM} = jsdom;
 const fs = require('fs');
+const xlsx = require("json-as-xlsx");
+let settings = {
+    fileName: "MySpreadsheet", // Name of the resulting spreadsheet
+    extraLength: 3, // A bigger number means that columns will be wider
+    writeMode: "writeFile", // The available parameters are 'WriteFile' and 'write'. This setting is optional. Useful in such cases https://docs.sheetjs.com/docs/solutions/output#example-remote-file
+    writeOptions: {}, // Style options from https://docs.sheetjs.com/docs/api/write-options
+    RTL: true, // Display the columns from right-to-left (the default value is false)
+  }
 
 const leaderBoardArr = [];
 let counter = 0;
@@ -73,6 +81,7 @@ function cb2(error,response,html){
         //1. To make a json file we have to first require file module
         let data = JSON.stringify(leaderBoardArr); // It will convert arr into the string because fs.writeFileSync function needs data to be in string format
         fs.writeFileSync('batsmanStats.json' , data);
+        xlsx(leaderBoardArr, settings);
     }
 }
 }
