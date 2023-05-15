@@ -4,8 +4,9 @@ const jsdom = require('jsdom');
 const {JSDOM} = jsdom;
 const fs = require('fs');
 const xlsx = require("json-as-xlsx");
+
 let settings = {
-    fileName: "MySpreadsheet", // Name of the resulting spreadsheet
+    fileName: "BatsmanStats", // Name of the resulting spreadsheet file
     extraLength: 3, // A bigger number means that columns will be wider
     writeMode: "writeFile", // The available parameters are 'WriteFile' and 'write'. This setting is optional. Useful in such cases https://docs.sheetjs.com/docs/solutions/output#example-remote-file
     writeOptions: {}, // Style options from https://docs.sheetjs.com/docs/api/write-options
@@ -81,6 +82,22 @@ function cb2(error,response,html){
         //1. To make a json file we have to first require file module
         let data = JSON.stringify(leaderBoardArr); // It will convert arr into the string because fs.writeFileSync function needs data to be in string format
         fs.writeFileSync('batsmanStats.json' , data);
+        //array into the excel sheet using json
+        let dataExcel = [
+            {
+             sheet: "BatsmanStats",  
+              columns: [    // columns represent the heading we want for our excel sheet columns
+                { label: "Player Name", value: "playerName" },    //In value we give object key to get that value inside our excel sheet at that column 
+                { label: "Matches", value: "matches"  }, 
+                { label: "Runs", value: "runs" }, 
+                { label: "Balls", value: "balls" }, 
+                { label: "Fours", value: "fours" }, 
+                { label: "Sixes", value: "sixs" }, 
+              ],
+              content: leaderBoardArr  // this is an array of object means data which we want to convert into excel sheet
+            }
+        ]
+        xlsx(dataExcel, settings);
     }
 }
 }
