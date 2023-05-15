@@ -1,3 +1,6 @@
+  //To use the request package or module first we have to install it
+  //npm i request   or npm install request 
+
 const request = require('request');
 
 request('http://www.google.com', cb);  // Here link can be anything which we want to access
