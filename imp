@@ -7,4 +7,4 @@
 //node module - fs, childprocess, path,os   are pre installed in nodejs
 //To use request module -- npm install request  (install in open in integerated terminal)    [It is a node module which is used to give a request to server and to get back the response]
 //To use jsdom module - npm install jsdom       (   ""   ""   ""       "    "  """"""""")
-//
+//puppeteer   --  npm i puppeteer                   https://www.npmjs.com/package/puppeteer
