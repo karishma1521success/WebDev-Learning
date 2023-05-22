@@ -1,1 +1,10 @@
 //In inspect use ctrl+f to search by using selector for web scraping.
+
+//html -- use Go live sever Extension 
+//To execute js in vs code make sure you have installed the node.js
+
+
+//node module - fs, childprocess, path,os   are pre installed in nodejs
+//To use request module -- npm install request    [It is a node module which is used to give a request to server and to get back the response]
+//To use jsdom module - npm install jsdom 
+//
