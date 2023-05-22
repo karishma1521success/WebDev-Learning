@@ -1,7 +1,7 @@
 let puppeteer = require('puppeteer');
 
 let browser = puppeteer.launch({headless:false});   //puppeteer.launch()  is a promise which opens the browser
-
+//{headless:false}  show the browser openeing if we don't do so automation will occur but browser will not display
 browser.then(function (browser){
     console.log("browser is opened" +browser);   // This will open a browser;
     //If we want to open a new tab in our browser
