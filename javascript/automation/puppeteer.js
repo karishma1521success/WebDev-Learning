@@ -1,4 +1,6 @@
+//automation is something which works automatically at a very high speed.
 let puppeteer = require('puppeteer');
+
 
 let browser = puppeteer.launch({headless:false});   //puppeteer.launch()  is a promise which opens the browser
 //{headless:false}  show the browser openeing if we don't do so automation will occur but browser will not display
@@ -9,9 +11,6 @@ browser.then(function (browser){
     return page;
 
 })
-
-
-
 
 
 
