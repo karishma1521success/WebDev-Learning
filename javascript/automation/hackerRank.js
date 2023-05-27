@@ -1,8 +1,8 @@
 //step1. open the browser
 //step2. open the new page/new tab
 //step3. go to link
-//step4.  wait         [do wait for sometime to load the page because automation is very fast it will not give time to browser to load the url page]
-//step5  click on something on page if you want
+//step4. wait         [do wait for sometime to load the page because automation is very fast it will not give time to browser to load the url page]
+//step5. click on something on page if you want
 const puppeteer = require('puppeteer');
 let page;
 
@@ -22,6 +22,8 @@ browserPromise.then(function (browser){
 })
 
 
+
+//console.log() inside the page.evaluate() function runs on the browser only not in the terminal and other console.log() runs on terminal only
 
 
 
