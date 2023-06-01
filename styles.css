@@ -1,0 +1,128 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    background-color: black;
+    color:rgba(255, 255, 255, 0.712);
+}
+
+#main{
+    width: 95%;
+    background-color: rgb(34,36,38);
+    margin: 25px auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.heading{
+    text-align: center;
+    padding: 4px 0 0 0;
+}
+
+#title{
+    font-size: 3rem;
+    padding: 3rem 0 4px 0;
+}
+
+.heading p{
+    padding: 1rem 0 0 0;
+    vertical-align: bottom;
+    font-size: large;
+}
+
+.image-caption{
+    padding:15px;
+}
+
+#img-div{
+    background-color: black;
+    display: flex;  
+    flex-direction: column; 
+    padding: 1rem;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+#image{
+    max-width: 950px;
+    height: auto;
+}
+
+img{
+    margin: auto;
+}
+#image,#img-caption{
+    width: 88%;
+    min-width: 200px;
+}
+#img-caption{
+    text-align: center;
+}
+
+#tribute-info{
+    align-self: center;
+}
+
+.tribute-div,.about-tribute ul{
+    display: flex;
+    flex-direction: column;
+}
+
+
+.tribute-div{
+    width: 50%;
+    margin: 1px auto;
+    gap: 3rem;    
+    padding-bottom: 2rem;
+}
+
+.about-tribute ul{
+    gap: 1rem;
+}
+
+.about-tribute ul{
+    color:rgb(181, 179, 179);
+}
+
+.about-tribute span{
+    font-weight: bold;
+    font-size: large;
+    color: rgba(255, 255, 255, 0.679);
+}
+
+.tribute-Quote{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.tribute-Quote .Quote{
+    font-size: large;
+}
+
+.Quote-by{
+    font-style: italic;
+}
+
+.more-info-div{
+    text-align: center;
+    padding: 2rem;
+    font-size: 18px;
+}
+
+#tribute-link{
+    color: #477ca7;
+}
+
+a#tribute-link:hover{
+    cursor: pointer;
+    color:blue;
+}
+
+a#tribute-link:visited{
+    color:paleturquoise;
+}
