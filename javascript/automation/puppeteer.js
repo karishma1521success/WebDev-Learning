@@ -1,4 +1,6 @@
 //automation is something which works automatically at a very high speed.
+//puppeteer is a automated test software which handles the all the work of google chrome.
+
 let puppeteer = require('puppeteer');
 
 

@@ -11,9 +11,9 @@ const email = "io1g4mko@nextsuns.com";
 const password = "1234567";
 
 
-let browserPromise = puppeteer.launch({headless:false});
-
-
+let browserPromise = puppeteer.launch({headless:false,defaultViewport: null,args: ['--start-fullscreen']});
+//{headless:false} - is used to make browser visible opening so that we can see all the automation.
+//
 //promise chaining is the chainig of promise which is done by returning the another promise in the other then function
 browserPromise.then(function (browser){
     console.log("browser is opened");
@@ -74,15 +74,10 @@ browserPromise.then(function (browser){
 }).then(function (){
     return page.click('a[data-attr1="algorithms"]');
 }).then(function (){
+    console.log("algorithm has clicked");
     return page.waitForSelector('.filter-wrap .filter-group:nth-of-type(4)');  
 }).then(function (){
-    let clickPromise = page.evaluate(function (){
-        let subdomainDiv = document.querySelector('.filter-wrap .filter-group:nth-of-type(4)');
-        let warmupbutton =  subdomainDiv.querySelector('ui-checklist-list-item:nth-of-type(1) .checkbox-wrap');
-        warmupbutton.click();
-        console.log(warmupbutton); // this console will not print on terminal it will print on browser console.
-        return;
-    })
+    let clickPromise = page.click('.filter-wrap .filter-group:nth-of-type(4) .ui-checklist-list-item:nth-of-type(1) .checkbox-wrap .checkbox-input')
     return clickPromise;
 }).then(function (){
     console.log("clicked the warmup filter");
