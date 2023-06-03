@@ -10,6 +10,19 @@ const name = "Tony Stark";
 const email = "io1g4mko@nextsuns.com";
 const password = "1234567";
 
+//let's make wait and check promisified function which do wait and check promise both and return a promise
+function waitAndCheck(selector){
+    return new Promise(function (resolve,reject){
+        let waitPromise = page.waitForSelector(selector);
+        waitPromise.then(function (){
+            let clickPromise = page.click(selector);
+            return clickPromise;
+        }).then(function (){
+            resolve();
+        })
+    })
+}
+
 
 let browserPromise = puppeteer.launch({headless:false,defaultViewport: null,args: ['--start-fullscreen']});
 //{headless:false} - is used to make browser visible opening so that we can see all the automation.
@@ -27,15 +40,19 @@ browserPromise.then(function (browser){
     let urlPromise = page.goto('https://www.hackerrank.com/');
     return urlPromise;
 }).then(function (){
-    console.log("hackerRank url is opened");
-    //now It will take a time to load the url page so we have to wait for signup selector
-    let waitPromise = page.waitForSelector('.home22-intro-text a:nth-of-type(1)');
-    return waitPromise;
-}).then(function (){
-    //Here fullfilled it means page has loaded fully now I have to click on signup button
-    let clickPromise = page.click('.home22-intro-text a:nth-of-type(1)');
-    return clickPromise;  // It is making a promise that I will click on this selector
-}).then(function (){
+    return waitAndCheck('.home22-intro-text a:nth-of-type(1)');   //this below code is replaced by this function 
+})
+// .then(function (){
+//     console.log("hackerRank url is opened");
+//     //now It will take a time to load the url page so we have to wait for signup selector
+//     let waitPromise = page.waitForSelector('.home22-intro-text a:nth-of-type(1)');
+//     return waitPromise;
+// }).then(function (){
+//     //Here fullfilled it means page has loaded fully now I have to click on signup button
+//     let clickPromise = page.click('.home22-intro-text a:nth-of-type(1)');
+//     return clickPromise;  // It is making a promise that I will click on this selector
+// })
+.then(function (){
     console.log('signup button is clicked');
     let waitPromise = page.waitForSelector('a[data-action="practice"]');
     return waitPromise;
