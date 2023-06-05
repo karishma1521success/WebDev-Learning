@@ -23,8 +23,8 @@ function waitAndCheck(selector){
     })
 }
 
-
-let browserPromise = puppeteer.launch({headless:false,defaultViewport: null,args: ['--start-fullscreen']});
+// defaultViewport: null,args: ['--start-fullscreen']
+let browserPromise = puppeteer.launch({headless:false});
 //{headless:false} - is used to make browser visible opening so that we can see all the automation.
 //
 //promise chaining is the chainig of promise which is done by returning the another promise in the other then function
@@ -98,15 +98,19 @@ browserPromise.then(function (browser){
     return clickPromise;
 }).then(function (){
     console.log("clicked the warmup filter");
-    return waitForSelector('.challenges-list a');
+    return page.waitForSelector('.challenges-list a');
 }).then(function (){
-    let arrPromise = page.evaluate(function (){
+    let arrPromise = page.evaluate(function(){
+        let arr=[];
         let aTags = document.querySelectorAll('.challenges-list a');
-        for(let i=0; i<aTags; i++){
+        console.log(aTags);
+        console.log(aTags.length);
+        for(let i=0; i<aTags.length; i++){
             let link = aTags[i].href;
             console.log(link);
+            arr.push(link);
         }
-        return;
+        return arr;
     })
     return arrPromise;
 }).then(function (questionArr){
