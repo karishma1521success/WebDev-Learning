@@ -98,6 +98,19 @@ browserPromise.then(function (browser){
     return clickPromise;
 }).then(function (){
     console.log("clicked the warmup filter");
+    return waitForSelector('.challenges-list a');
+}).then(function (){
+    let arrPromise = page.evaluate(function (){
+        let aTags = document.querySelectorAll('.challenges-list a');
+        for(let i=0; i<aTags; i++){
+            let link = aTags[i].href;
+            console.log(link);
+        }
+        return;
+    })
+    return arrPromise;
+}).then(function (questionArr){
+    console.log(questionArr);
 })
 
 
