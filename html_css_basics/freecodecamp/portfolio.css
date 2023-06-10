@@ -1,0 +1,269 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+#full-container{
+    color: white;
+}
+
+#welcome-section{
+    height: 100vh;
+    background-image: linear-gradient(62deg, rgb(46, 50, 52) 0%, rgb(18, 20, 20) 100%);
+}
+
+#welcome-section header{
+    width: 100%;
+    height: 10vh;
+    background-color: #982736;
+    position: fixed;
+    z-index: 2;
+    display: flex;
+    justify-content: flex-end;
+}
+
+#welcome-section header #navbar{
+    position: fixed;
+}
+
+#welcome-section header #navbar ul{
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap:5rem;
+    margin-top: 1rem;
+    margin-right: 1rem;
+    font-size: 20px;
+    list-style-type: none;
+}
+
+#welcome-section header #navbar ul a{
+    text-decoration: none;
+    font-weight: 800;
+    letter-spacing: 1px;
+    color: white;
+}
+
+#welcome-section header #navbar ul a:hover{
+    color: greenyellow;
+    font-size: 22px;
+    text-decoration-style: dashed;
+}
+
+#welcome-section #About{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    height: 90vh;
+    position: relative;
+    top: 10%;
+    
+}
+
+#welcome-section #About h1{
+    font-size: 35px;
+    text-shadow: 3px 3px 2px rgba(255, 255, 255, 0.4);
+}
+
+#welcome-section #About h2{
+    font-size: 20px;
+    color: rgba(255, 255, 0,0.8);
+    text-shadow: 0px 2px 2px rgba(255, 255, 255, 0.4);
+}
+
+#projects{
+    background-color:#374564;
+    padding-top: 3rem;
+}
+
+#projects #Work{
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    align-items: center;
+}
+
+#projects #Work .projects-heading{
+    align-self: center;
+    padding: 0.6rem;
+    text-align: center;
+    font-size: 25px;
+    border-bottom: 2px solid rgba(220, 220, 220, 0.417);
+}
+
+#projects #Work #projects-grid{
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    gap: 2rem;
+    align-items: stretch;
+    margin-left: 2rem;
+}
+
+#projects #Work #projects-grid a{
+    text-decoration: none;
+}
+
+#projects #Work #projects-grid>div .project-image{
+    width: 100%;
+    height: 80%;
+}
+
+#projects #Work #projects-grid>div .project-image img{
+    height: 100%;
+}
+
+
+#projects #Work #projects-grid>div .project-tile{
+    width: 100%;
+    height: 20%;
+    background-color:black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#projects #Work #projects-grid>div .project-tile p{
+    height: 50%;
+    text-align: center;
+    vertical-align: center;
+    font-size: 22px;
+    color: rgba(255, 255, 255,0.8);
+}
+
+#projects #Work #projects-grid>div .project-tile p span{
+    color: red;
+}
+
+#projects #Work #projects-grid img{
+    width: 300px;
+}
+
+#projects #Work .projects-button button{
+    width: 150px;
+    height: 40px;
+    margin-bottom: 3rem;
+    font-size: larger;
+    background-color: #262d34;
+    border: 1px solid grey;
+    color: white;
+}
+
+#projects #Work .projects-button button:hover{
+    cursor: pointer;
+    background-color: grey;
+    color:#262d34;
+    border: 1px solid black;
+}
+
+#Contact{
+    background-color: #262d34;
+    height: 90vh;
+}
+
+#Contact #footer{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-around;
+}
+
+
+#Contact #footer .up-footer{
+    display: flex;
+    flex-direction: column;
+}
+
+#Contact #footer .up-footer h3,#Contact #footer .up-footer p{
+    font-size: 3rem;
+    text-align: center;
+    padding-top: 1rem;
+}
+
+#Contact #footer .up-footer p{
+    font-size: 1.5rem;
+    font-style: italic;
+    color: grey;
+}
+
+#Contact #footer .up-footer .contact-nav ul {
+    display: flex;
+    justify-content: space-evenly;
+    list-style-type: none;
+    flex-wrap: wrap;
+    padding: 2rem;
+}
+#Contact #footer .up-footer .contact-nav ul li a,#Contact #footer .up-footer .contact-nav ul li i{
+    color: white;
+    padding: 0 1rem;
+    font-size: 28px;
+    text-decoration: none;
+}
+#Contact #footer .up-footer .contact-nav ul li a{
+    transition-property: font-size;
+    transition-duration:2s;
+    transition-timing-function: ease-in-out;
+}
+
+#Contact #footer .up-footer .contact-nav ul li a:hover{
+    color:greenyellow;
+    font-size: 34px;
+}
+
+#Contact #footer .down-footer{
+    height: 10%;
+    font-size: 30px;
+    border-top: 2px solid #982736;
+}
+
+#Contact #footer .down-footer p{
+    text-align: center;
+    margin-top: 3rem;
+}
+
+#Contact #footer .down-footer p a{
+    color: rgba(255, 255, 255, 0.718);
+    text-decoration: none;
+}
+
+#Contact #footer .down-footer p a:hover{
+    color: burlywood;
+}
+
+@media screen and (max-width:1000px) {
+    #projects #Work #projects-grid>div .project-tile p,#Contact #footer .up-footer .contact-nav ul li a{
+        font-size: 17px;
+    }
+}
+
+@media screen and (max-width:800px) {
+    #projects #Work #projects-grid{
+        grid-template-columns: 45% 45%;
+    }
+
+    #welcome-section, #welcome-section #About {
+        height: 65vh;
+    }
+
+    #projects #Work #projects-grid>div .project-tile p{
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width:600px) {
+    #projects #Work #projects-grid{
+        grid-template-columns: 85%;
+    }
+    #Contact #footer .up-footer .contact-nav ul{
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+}
