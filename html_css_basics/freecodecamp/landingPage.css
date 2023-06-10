@@ -1,0 +1,241 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+#container{
+    display: flex;    
+    flex-direction: column;
+    gap: 4rem;
+}
+
+#header{
+    width:100%;
+    min-width: 300px;
+    position: fixed;
+    z-index: 1;
+    background-color: bisque;
+    padding: 2rem 1rem;
+}
+
+#header,#header nav#nav-bar ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+
+#header img#header-img{
+    width: 300px;
+}
+
+#header nav#nav-bar ul li{
+    font-size:20px;
+    list-style: none;
+}
+
+#header nav#nav-bar ul li a{
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    transition-property: font-size;
+    transition-timing-function: ease-in-out;
+    transition-duration: 2s;
+}
+
+#header nav#nav-bar ul li a:hover{
+    cursor: pointer;
+    color:rgb(20, 118, 20);
+    font-size: 22px;
+}
+
+#header nav#nav-bar ul li a:visited{
+    color: purple;
+}
+
+#main{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top:4rem;
+}
+
+#section-two,#section-two #form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+#form input{
+    display: inline-block;
+}
+
+#main #section-two #form input#email{
+    width: 300px;
+    height: 23px;
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+    padding: 2px;
+}
+
+#main #section-two #form input#submit{
+    width: 150px;
+    font-size: 17px;
+    font-weight: 300;
+    background-color:rgb(64, 176, 64);
+    color: beige;
+    text-decoration: dashed;
+    text-decoration: slategray;
+    border: 1px solid black;
+    padding: 4px 0;
+    border-radius: 3px;
+}
+
+#main #section-two #form input#submit:hover{
+    color:black;
+    background-color:rgba(64, 176, 64, 0.531);
+}
+
+#main #section-three,#main #section-five{
+    display: flex;
+    justify-content: center;
+    margin:4rem 1rem 3rem 1rem ;
+}
+
+#features{
+    width: 70%;
+    display: grid;
+    grid-template-columns: 10% 90%;
+    grid-template-rows: auto auto auto;
+    gap: 3rem 1rem;
+}
+
+#features .icon{
+    display: flex;
+    justify-content: center;
+    color: rgb(255, 94, 0);
+}
+
+#main #section-three #features div h3{
+    font-size: 25px;
+}
+
+#main #section-three #features div p{
+    font-size: 18px;
+    font-weight: 500;
+}
+
+#section-four{
+    display: flex;
+    justify-content: center;
+}
+
+#main #section-five #pricing{
+    width: 80%;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    column-gap: 2rem;
+}
+
+#main #section-five #pricing .price-card{
+    border: 2px solid grey;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    background-color: rgba(150,150,150,0.2);
+    padding: 0 0 2rem 0;
+}
+#main #section-five #pricing .price-card .card-header{
+    background-color: rgba(128, 128, 128,0.6);
+    border: 1px solid gray;
+    width: 100%;
+    text-align: center;
+    padding: 15px;
+}
+#main #section-five #pricing .price-card .card-main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+
+#main #section-five #pricing .price-card .card-main h3{
+    margin-bottom: 0.8rem;
+}
+
+#main #section-five #pricing .price-card .card-main button{
+    width: 100px;
+    height: 30px;
+    margin-top: 1rem;
+    background-color: rgba(255, 166, 0,0.5);
+    font-size: 17px;
+    border: 1px solid rgba(255, 166, 0, 0.353);
+    border-radius: 7%;
+    font-weight: 300;
+}
+
+#section-six footer{
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    color: white;
+}
+
+#section-six #footer #footer-nav ul{
+    margin: 7px;
+    display: flex;
+    border: 1px solid black;
+    justify-content: flex-end;
+    gap: 5rem;
+    flex-wrap: wrap;
+}
+#section-six #footer #footer-nav ul li{
+    list-style-type: none;
+}
+
+#section-six #footer #footer-nav ul li a{
+    font-size: 20px;
+    text-decoration: none;
+    color: rgb(13, 255, 0);
+}
+
+#section-six #footer #copyright{
+    text-align: end;
+    font-size: 20px;
+    margin:0 20px;
+}
+
+@media screen and (max-width:700px) {
+    #header img#header-img{
+        width: 180px;
+    }
+}
+
+@media screen and (max-width:400px) {
+    #header{
+        width: 100vw;
+        flex-direction: column;
+        padding: 0;
+    }
+    #header,#header nav#nav-bar ul{
+        justify-content: flex-start;
+    }
+
+    #main #section-five #pricing{
+        grid-template-columns: auto;
+        row-gap: 3rem;
+    }
+
+    #section-four #video{
+        width: 80vw;
+        height:30vh;
+    }
+   
+}
