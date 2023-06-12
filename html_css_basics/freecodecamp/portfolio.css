@@ -22,7 +22,7 @@ html{
     height: 10vh;
     background-color: #982736;
     position: fixed;
-    z-index: 2;
+    z-index: 3;
     display: flex;
     justify-content: flex-end;
 }
