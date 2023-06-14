@@ -9,6 +9,7 @@ let page;
 const name = "Tony Stark";
 const email = "io1g4mko@nextsuns.com";
 const password = "1234567";
+const answersKey = require('./codekey'); //this is how we require self made module in different folder
 
 //let's make wait and check promisified function which do wait and check promise both and return a promise
 function waitAndCheck(selector){
@@ -126,6 +127,7 @@ function questionSolver(link){
             return waitAndCheck('.checkbox-wrap .checkbox-input');
         }).then(function (){
             console.log("click");
+            let typePromise = page.type('#input-1' , )
         }).then(function (){
             resolve();
         })
