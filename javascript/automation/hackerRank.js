@@ -3,7 +3,7 @@
 //step2. open the new page/new tab
 //step3. go to link
 //step4. wait         [do wait for sometime to load the page because automation is very fast it will not give time to browser to load the url page]
-//step5. click on something on page if you want
+//step5. click on something on page if you want and you can also make promisified function to perform a similiar task
 const puppeteer = require('puppeteer');
 let page;
 const name = "Tony Stark";
@@ -114,8 +114,23 @@ browserPromise.then(function (browser){
     })
     return arrPromise;
 }).then(function (questionArr){
-    console.log(questionArr);
+    questionSolver(questionArr[0]);
 })
+
+
+function questionSolver(link){
+    return new Promise(function (resolve, reject){
+        let linkPromise = page.goto(link);
+        linkPromise.then(function (){
+            console.log("link is opened");
+            return waitAndCheck('.checkbox-wrap .checkbox-input');
+        }).then(function (){
+            console.log("click");
+        }).then(function (){
+            resolve();
+        })
+    })
+}
 
 
 //console.log() inside the page.evaluate() function runs on the browser only not in the terminal and other console.log() runs on terminal only
