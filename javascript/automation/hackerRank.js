@@ -9,7 +9,7 @@ let page;
 const name = "Tony Stark";
 const email = "io1g4mko@nextsuns.com";
 const password = "1234567";
-const answersKey = require('./codekey'); //this is how we require self made module in different folder
+const answersKey = require('./codekey'); //this is how we require self made module in different folder.
 
 //let's make wait and check promisified function which do wait and check promise both and return a promise
 function waitAndCheck(selector){
@@ -115,11 +115,11 @@ browserPromise.then(function (browser){
     })
     return arrPromise;
 }).then(function (questionArr){
-    questionSolver(questionArr[0]);
+    questionSolver(questionArr[0] , answersKey.answers[0]);
 })
 
 
-function questionSolver(link){
+function questionSolver(link, answer){
     return new Promise(function (resolve, reject){
         let linkPromise = page.goto(link);
         linkPromise.then(function (){
@@ -127,7 +127,10 @@ function questionSolver(link){
             return waitAndCheck('.checkbox-wrap .checkbox-input');
         }).then(function (){
             console.log("click");
-            let typePromise = page.type('#input-1' , )
+            let typePromise = page.type('#input-1' , answer);
+            return typePromise;
+        }).then(function (){
+            console.log("answer typed");
         }).then(function (){
             resolve();
         })
