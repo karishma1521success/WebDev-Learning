@@ -7,7 +7,7 @@
 const puppeteer = require('puppeteer');
 let page;
 const name = "Tony Stark";
-const email = "io1g4mko@nextsuns.com";
+const email = "kenz0210@rdupi.org";
 const password = "1234567";
 const answersKey = require('./codekey'); //this is how we require self made module in different folder.
 
@@ -115,7 +115,10 @@ browserPromise.then(function (browser){
     })
     return arrPromise;
 }).then(function (questionArr){
-    questionSolver(questionArr[0] , answersKey.answers[0]);
+    questionSolver(questionArr[0] , answersKey.answers[0]);  //it is for one question for testing for do the same for all the questions we use loop
+    // for(let questionIdx = 0; questionIdx < questionArr.length; questionIdx++){
+    //     questionSolver(questionArr[questionIdx],answersKey.answers[questionIdx]);
+    // }
 })
 
 //this function will take link and open that link and submit the correct answer of that question
@@ -131,6 +134,52 @@ function questionSolver(link, answer){
             return typePromise;
         }).then(function (){
             console.log("answer typed");
+            //copy the whole text
+            let holdPromise = page.keyboard.down('Control'); //down means still pressing that key   and up means release that key and press means press and release instantly
+            return holdPromise;
+        }).then(function (){
+            //here this then tells that it pressing the control key
+            console.log("pressed control");
+            let pressA = page.keyboard.press('A');
+            return pressA;
+        }).then(function (){
+            //A key is pressed now press C
+            console.log("pressed A");
+            let pressC = page.keyboard.press('C');
+            return pressC;
+        }).then(function (){
+            console.log("pressed C");
+            let unholdPromise = page.keyboard.up('Control');
+            return unholdPromise;
+        }).then(function (){
+            //copied the text now paste it
+            console.log("unhold control");
+            let clickPromise = page.click('.view-line');
+            return clickPromise;
+        }).then(function (){
+            let holdPromise = page.keyboard.down('Control'); //down means still pressing that key   and up means release that key and press means press and release instantly
+            return holdPromise;
+        }).then(function (){
+            //clicked now paste
+            console.log("pressed control");
+            let pressA = page.keyboard.press('A');
+            return pressA;
+        }).then(function (){
+            let pressBackspace = page.keyboard.press('Backspace');
+            return pressBackspace;
+        }).then(function (){
+            console.log("pressed backspace");
+            let pressV = page.keyboard.press('V');
+            return pressV;
+        }).then(function (){
+            console.log("pressed V");
+            let unholdPromise = page.keyboard.up('Control');
+            return unholdPromise;
+        }).then(function (){
+            let clickPromise = page.click('.hr-monaco-submit');  //promise of clicking submit button
+            return clickPromise;
+        }).then(function (){
+            console.log("submit is clicked");
         }).then(function (){
             resolve();
         })
