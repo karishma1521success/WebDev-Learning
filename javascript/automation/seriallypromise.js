@@ -15,3 +15,19 @@ file1KaPromise.then(function (data){
 
 //here order is file1   then file2 because file2  promise is inside the file1promise   
 //file2 will execute when file1 get executed
+
+let arr = ['./file1.txt' , './file2.txt' , './file3.txt' , './file4.txt'];
+
+let filePromise = fs.promises.readFile(arr[0]);
+
+for(let i=1; i<arr.length; i++){
+    filePromise = filePromise.then(function(data){
+        console.log("" + data);
+        let nextFilePromise = fs.promises.readFile(arr[i]);
+        return nextFilePromise;
+    })
+}
+
+filePromise.then(function(data){
+    console.log(data + "");
+})

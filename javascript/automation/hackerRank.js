@@ -119,6 +119,7 @@ browserPromise.then(function (browser){
     // for(let questionIdx = 0; questionIdx < questionArr.length; questionIdx++){
     //     questionSolver(questionArr[questionIdx],answersKey.answers[questionIdx]);
     // }
+    let questionPromise = page.goto
 })
 
 //this function will take link and open that link and submit the correct answer of that question
