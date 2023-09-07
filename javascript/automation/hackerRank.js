@@ -115,11 +115,22 @@ browserPromise.then(function (browser){
     })
     return arrPromise;
 }).then(function (questionArr){
-    questionSolver(questionArr[0] , answersKey.answers[0]);  //it is for one question for testing for do the same for all the questions we use loop
+    // questionSolver(questionArr[0] , answersKey.answers[0]);  //it is for one question for testing for do the same for all the questions we use loop
     // for(let questionIdx = 0; questionIdx < questionArr.length; questionIdx++){
     //     questionSolver(questionArr[questionIdx],answersKey.answers[questionIdx]);
     // }
-    let questionPromise = page.goto
+    //I have to create that loop which will take all the links one by one after completing the last one fully
+    let questionPromise = questionSolver(questionArr[0], answersKey.answers[0]);
+    for(let link = 1; link<questionArr.length; link++){
+        questionPromise = questionPromise.then(function(){
+           let nextQuestionPromise = questionSolver(questionArr[link],answersKey.answers[link])
+           return nextQuestionPromise;
+        })
+    }
+    return questionPromise;
+   
+}).then(function (){
+    console.log("All questions done");
 })
 
 //this function will take link and open that link and submit the correct answer of that question
